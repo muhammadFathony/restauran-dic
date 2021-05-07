@@ -1,0 +1,17 @@
+
+@media screen and (min-width: 700px){
+    .sample-restaurant {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-column-gap: 10px;
+        grid-row-gap: 16px;
+    }
+}
+
+@media screen and (min-width: 900px){
+    .sample-restaurant {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+}
+

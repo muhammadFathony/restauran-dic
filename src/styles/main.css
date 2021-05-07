@@ -1,0 +1,159 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body, html {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+}
+body {
+    font-family: "Lato", sans-serif;
+    font-size: 12px;
+    color: #424242;
+}
+header {
+    display: inline;
+}
+nav {
+    background-color: #132c33;
+    padding: 20px;
+    position: sticky;
+    top: 0;
+    text-align: right;
+}
+nav a {
+    font-size: 18px;
+    font-weight: 400;
+    text-decoration: none;
+    color: white;
+}
+nav a:hover {
+    font-weight: bold;
+}
+nav li {
+    display: inline;
+    list-style-type: none;
+    margin-right: 20px;
+}
+nav .icon {
+    display: none;
+}
+.jumbotron {
+    font-size: 20px;
+    text-align: center;
+    color: #f7f7f7;
+    position: fixed;
+}
+img {
+    display: block;
+}
+.hero-element {
+    display: flex;
+    align-items: center;
+    min-height: 580px;
+    width: 100%;
+    text-align: center;
+    background-image: url("../public/images/heros/hero-image_3.jpg");
+    background-position: center;
+    background-color: green;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+    z-index: -1;
+}
+.hero-inner {
+    margin: 0 auto;
+    max-width: 800px;
+}
+.hero-title {
+    color: #fff;
+    font-weight: 500;
+    font-size: 40px;
+}
+.hero-tagline {
+    color: #fff;
+    margin-top: 16px;
+    font-size: 18px;
+    font-weight: 300;
+}
+main {
+    width: 1200px;
+    margin: 0 auto;
+}
+.content {
+    padding: 32px;
+    position: relative;
+}
+.explore {
+    width: 100%;
+    margin: 60px auto;
+    text-align: center;
+}
+.explore-label {
+    font-size: 32px;
+    font-weight: 500;
+}
+.explore-label::after {
+    content: '';
+    margin-top: 16px;
+    display: block;
+    border-bottom: 1px solid #eeeeee;
+}
+.sample-restaurant {
+    margin: 32px auto auto;
+    text-align: left;
+}
+.sample-item {
+    float: left;
+    margin: 16px;
+    box-shadow: 0 4px 8px 0 rgb(0 0 0 / 20%);
+    width: 300px;
+    height: 560px;
+    border-radius: 5px;
+    overflow: hidden;
+}
+.sample-img {
+    width: 100%;
+}
+.sample-content {
+    padding: 16px 32px 32px 32px;
+}
+.content-date {
+    font-size: 10px;
+    text-transform: uppercase;
+    color: #999;
+}
+.content-author {
+    color: red;
+    text-decoration: none;
+}
+.content-title {
+    font-weight: 500;
+    font-size: 18px;
+    margin-top: 16px;
+    transition: 0.3s opacity;
+}
+.content-title a {
+    text-decoration: none;
+    color: inherit;
+}
+.content-description {
+    margin-top: 16px;
+    font-size: 14px;
+    line-height: 1.5em;
+}
+footer {
+    display: inline;
+}
+.footer-restaurant {
+    background-color: #132c33;
+    position: fixed;
+    padding: 20px;
+    bottom: 0;
+    width: 100%;
+    text-align: center;
+    color: #fff;
+}
