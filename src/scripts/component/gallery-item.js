@@ -8,7 +8,7 @@ class GalleryItem extends HTMLElement {
   render () {
     this.innerHTML = `
         <article class="sample-item">
-            <img src="${this._restaurants.pictureId}" class="sample-img">
+            <img src="${this._restaurants.pictureId}" alt="${this._restaurants.name}" class="sample-img">
                 <div class="sample-content">
                     <p class="content-date">${this._restaurants.name}<a href="#" class="content-author"> from ${this._restaurants.city}</a>
                     </p>

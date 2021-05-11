@@ -17,14 +17,26 @@ body {
 header {
     display: inline;
 }
+.button-min {
+    min-width : 44px;
+    min-height: 44px;
+}
 .header__menu {
     font-size: 32px;
-    display: block;
-    width: 30px;
-    width: 30px;
+    display: inline-block;
     position: absolute;
     right: 10px;
     color: white;
+    text-decoration: none;
+
+}
+.header__title {
+    color: white;
+    text-decoration: none;
+}
+
+#drawer.open {
+    transform: translate(0,0)
 }
 nav {
     background-color: #132c33;

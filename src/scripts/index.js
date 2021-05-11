@@ -5,12 +5,13 @@ import '../styles/responsive.css'
 import './component/header-app'
 import './component/app-bar'
 import './component/jumbotron-app'
+import './component/footer-app'
 // view
 import mainGalery from './view/main'
 
 document.addEventListener('DOMContentLoaded', mainGalery)
 console.log('Hello Coders! :)')
-const menu = document.querySelector('#menu')
+const menu = document.querySelector('#hamburger')
 const hero = document.querySelector('.hero-element')
 const main = document.querySelector('main')
 const drawer = document.querySelector('#drawer')
