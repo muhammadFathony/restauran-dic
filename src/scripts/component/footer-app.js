@@ -20,9 +20,9 @@ class FooterBar extends HTMLElement {
                 </div>
                 <div class="footer-basic">
                     <ul class="list-inline">
-                        <li class="list-inline-item"><a href="/">Home</a></li>
-                        <li class="list-inline-item"><a href="#favorite">Favorite</a></li>
-                        <li class="list-inline-item"><a href="https://github.com/muhammadFathony">About Us</a></li>
+                        <li class="list-inline-item"><a class="button-min" href="/">Home</a></li>
+                        <li class="list-inline-item"><a class="button-min" href="#favorite">Favorite</a></li>
+                        <li class="list-inline-item"><a class="button-min" href="https://github.com/muhammadFathony">About Us</a></li>
                     </ul>
                 </div>
             </article>

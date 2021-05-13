@@ -153,6 +153,10 @@ main {
 .sample-content {
     padding: 16px 32px 32px 32px;
 }
+.sample-rating{
+    text-align: right;
+    padding: 10px;
+}
 .content-date {
     font-size: 10px;
     text-transform: uppercase;
