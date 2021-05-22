@@ -1,29 +1,29 @@
 import 'regenerator-runtime' /* for async await transpile */
+// styles
 import '../styles/main.css'
 import '../styles/responsive.css'
+
 // component
 import './component/header-app'
 import './component/app-bar'
 import './component/jumbotron-app'
 import './component/footer-app'
+
 // view
-import mainGalery from './view/main'
+// import mainGalery from '../scripts/utils/main-initiator'
+import App from './view/app'
 
-document.addEventListener('DOMContentLoaded', mainGalery)
-console.log('Hello Coders! :)')
-const menu = document.querySelector('#hamburger')
-const hero = document.querySelector('.hero-element')
-const main = document.querySelector('main')
-const drawer = document.querySelector('#drawer')
-menu.addEventListener('click', function (event) {
-  drawer.classList.toggle('open')
-  event.stopPropagation()
+const app = new App({
+  button: document.querySelector('#hamburger'),
+  drawer: document.querySelector('#drawer'),
+  content: document.querySelector('#maincontent')
 })
 
-hero.addEventListener('click', function () {
-  drawer.classList.remove('open')
+window.addEventListener('hashchange', () => {
+  app.renderPage()
 })
 
-main.addEventListener('click', function () {
-  drawer.classList.remove('open')
+window.addEventListener('load', () => {
+  app.renderPage()
+  // document.addEventListener('DOMContentLoaded', mainGalery)
 })

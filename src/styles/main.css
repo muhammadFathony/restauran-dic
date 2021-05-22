@@ -18,6 +18,7 @@ header {
     display: inline;
 }
 .button-min {
+    display: inline-block;
     min-width : 44px;
     min-height: 44px;
 }
@@ -123,6 +124,10 @@ main {
     margin: 60px auto;
     text-align: center;
 }
+.explore-detail {
+    width: 100%;
+    margin: 60px auto;
+}
 .explore-label {
     font-size: 32px;
     font-weight: 500;
@@ -145,22 +150,65 @@ main {
     height: 100%;
     border-radius: 5px;
     overflow: hidden;
+    position: relative;
 }
 .sample-img {
     width: 100%;
     height: 300px;
 }
+.sample-img-detail {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+}
 .sample-content {
     padding: 16px 32px 32px 32px;
 }
 .sample-rating{
+    background-color: #132c3391;
+    color: white;
+    font-weight: 600;
     text-align: right;
     padding: 10px;
+}
+.sample-item-detail {
+    box-shadow: 0 4px 8px 0 rgb(0 0 0 / 20%);
+    width: 100%;
+    height: 100%;
+    border-radius: 5px;
+    overflow: hidden;
+    position: relative;
+    top: 30px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+}
+.sample-food-drink {
+    background-color: #132c3391;
+    color: white;
+    font-weight: 600;
+    padding: 10px;
+}
+.menu-foods {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+.sample-rating-detail {
+    background-color: #132c3391;
+    color: white;
+    font-weight: 600;
+    text-align: right;
+    padding: 10px;
+    position: relative;
+    top: 70px;
+    bottom: 0;
+    border-radius: 5px;
 }
 .content-date {
     font-size: 10px;
     text-transform: uppercase;
     color: #999;
+    max-height: 20px;
 }
 .content-author {
     color: red;
@@ -169,7 +217,6 @@ main {
 .content-title {
     font-weight: 500;
     font-size: 18px;
-    margin-top: 16px;
     transition: 0.3s opacity;
 }
 .content-title a {
@@ -177,7 +224,6 @@ main {
     color: inherit;
 }
 .content-description {
-    margin-top: 16px;
     font-size: 14px;
     line-height: 1.5em;
 }

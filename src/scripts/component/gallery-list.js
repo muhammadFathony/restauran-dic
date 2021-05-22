@@ -9,10 +9,12 @@ class GalleryList extends HTMLElement {
 
   render () {
     this.innerHTML = ''
-    this._restaurant.forEach(restaurants => {
-      const galleryItemElement = document.createElement('gallery-item')
-      galleryItemElement.restaurants = restaurants
-      this.appendChild(galleryItemElement)
+    this._restaurant.forEach((restaurants, index) => {
+      if (index < 6) {
+        const galleryItemElement = document.createElement('gallery-item')
+        galleryItemElement.restaurants = restaurants
+        this.appendChild(galleryItemElement)
+      }
     })
   }
 
