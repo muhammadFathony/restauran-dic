@@ -17,7 +17,6 @@ const Home = {
 
   async afterRender () {
     const home = await homeRestaurantSource.homeRestaurant()
-    console.log(home)
     Main(home, 'home')
   }
 }

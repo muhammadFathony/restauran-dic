@@ -1,4 +1,7 @@
 @media screen and (min-width: 360px) {
+    .sample-item-detail {
+        grid-template-columns: 1fr;
+    }
     .footer-basic ul {
         padding: 0;
     }
@@ -72,9 +75,15 @@
     .headline__content {
         padding: 16px 32px;
     }
-    .sample-restaurant, .customer-reviews {
+    .sample-restaurant {
         display: grid;
         grid-template-columns: 1fr 1fr 1fr;
+    }
+    .customer-reviews {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-column-gap: 10px;
+        grid-row-gap: 16px;
     }
 }
 @media screen and (min-width: 1200px) {

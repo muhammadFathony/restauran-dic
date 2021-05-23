@@ -1,4 +1,7 @@
+
 /* eslint-disable accessor-pairs */
+import CONFIG from '../globals/config'
+
 class DetailRestaurant extends HTMLElement {
   set restaurant (restaurant) {
     this._restaurant = restaurant
@@ -20,13 +23,23 @@ class DetailRestaurant extends HTMLElement {
     this._restaurant.menus.drinks.forEach(drink => {
       drinks += `<h3>- ${drink.name}</h3>`
     })
+    let reviews = ''
+    this._restaurant.customerReviews.forEach(review => {
+      reviews += `<article class="review">
+                      <h3 class="date-review">Review - ${review.date}</h3>
+                      <div class="review-desc">${review.review}</div>
+                      <div class="reviewers">
+                        <h5>By : ${review.name}</h5>
+                      </div>
+                  </article>`
+    })
     this.innerHTML = `
         <article class="sample-item-detail">
-          <img src="https://restaurant-api.dicoding.dev/images/small/14" alt="Melting Pot" class="sample-img-detail">
+          <img src="${CONFIG.BASE_IMAGE_URL}${this._restaurant.pictureId}" alt="Melting Pot" class="sample-img-detail">
               <div class="sample-content">
-                  <p class="content-date">${this._restaurant.name}<a href="#" class="content-author button-min"> from Medan</a>
+                  <p class="content-date">${this._restaurant.name}<a href="/#/detail/${this._restaurant.id}" class="content-author button-min"> from Medan</a>
                   </p>
-                  <h1 class="content-title"><a class="button-min" href="/#/detail/rqdv5juczeskfw1e867">Melting Pot</a></h1>
+                  <h1 class="content-title"><a class="button-min" href="/#/detail/${this._restaurant.id}">Melting Pot</a></h1>
                   <p class="content-description">${this._restaurant.description}</p>
               </div>
               <div class="sample-food-drink">
@@ -45,9 +58,9 @@ class DetailRestaurant extends HTMLElement {
                   Rating Restaurant : ${this._restaurant.rating}
                 </div>
       </article>
-      <article class="customer-reviews">
-
-      </article>`
+      <div class="customer-reviews">
+        ${reviews}
+      </div>`
   }
 }
 
