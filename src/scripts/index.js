@@ -10,9 +10,10 @@ import './component/jumbotron-app'
 import './component/footer-app'
 
 // view
-// import mainGalery from '../scripts/utils/main-initiator'
 import App from './view/app'
 
+// utils
+import swRegister from './utils/sw-register'
 const app = new App({
   button: document.querySelector('#hamburger'),
   drawer: document.querySelector('#drawer'),
@@ -25,5 +26,5 @@ window.addEventListener('hashchange', () => {
 
 window.addEventListener('load', () => {
   app.renderPage()
-  // document.addEventListener('DOMContentLoaded', mainGalery)
+  swRegister()
 })
