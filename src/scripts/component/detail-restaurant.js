@@ -24,14 +24,16 @@ class DetailRestaurant extends HTMLElement {
       drinks += `<h3>- ${drink.name}</h3>`
     })
     let reviews = ''
-    this._restaurant.customerReviews.forEach(review => {
-      reviews += `<article class="review">
-                      <h3 class="date-review">Review - ${review.date}</h3>
-                      <div class="review-desc">${review.review}</div>
-                      <div class="reviewers">
-                        <h5>By : ${review.name}</h5>
-                      </div>
-                  </article>`
+    this._restaurant.customerReviews.forEach((review, index) => {
+      if (index < 6) {
+        reviews += `<article class="review">
+                        <h3 class="date-review">Review - ${review.date}</h3>
+                        <div class="review-desc">${review.review}</div>
+                        <div class="reviewers">
+                          <h5>By : ${review.name}</h5>
+                        </div>
+                    </article>`
+      }
     })
     this.innerHTML = `
         <article class="sample-item-detail">
@@ -60,7 +62,8 @@ class DetailRestaurant extends HTMLElement {
       </article>
       <div class="customer-reviews">
         ${reviews}
-      </div>`
+      </div>
+      `
   }
 }
 

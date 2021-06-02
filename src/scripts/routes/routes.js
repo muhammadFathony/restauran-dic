@@ -1,10 +1,10 @@
 import Home from '../view/pages/home'
 import Detail from '../view/pages/detail'
-import News from '../view/pages/news'
+import Favorites from '../view/pages/favorites'
 
 const routes = {
   '/': Home, // default page
-  '/news': News,
+  '/favorites': Favorites,
   '/detail/:id': Detail
 }
 

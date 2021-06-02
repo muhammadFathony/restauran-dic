@@ -12,5 +12,8 @@ self.addEventListener('activate', (event) => {
 })
 
 self.addEventListener('fetch', (event) => {
+  if (event.request.url.indexOf('/review') > -1) {
+    return fetch(event.request)
+  }
   event.respondWith(CacheHelper.revalidateCache(event.request))
 })
