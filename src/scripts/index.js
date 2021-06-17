@@ -2,6 +2,8 @@ import 'regenerator-runtime' /* for async await transpile */
 // styles
 import '../styles/main.css'
 import '../styles/responsive.css'
+import 'lazysizes'
+import 'lazysizes/plugins/parent-fit/ls.parent-fit'
 
 // component
 import './component/header-app'

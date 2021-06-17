@@ -17,7 +17,7 @@ class GalleryItem extends HTMLElement {
     const urlImg = `${CONFIG.BASE_IMAGE_URL}${this._restaurants.pictureId}`
     this.innerHTML = `
         <article class="sample-item">
-            <img src="${urlImg}" alt="${this._restaurants.name}" class="sample-img">
+            <img src="${urlImg}" alt="${this._restaurants.name}" class="lazyload sample-img">
                 <div class="sample-content">
                     <p class="content-date">${this._restaurants.name} <a href="#" class="content-author button-min"> from ${this._restaurants.city}</a>
                     </p>
