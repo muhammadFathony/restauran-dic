@@ -8,7 +8,10 @@ class FooterBar extends HTMLElement {
         <div class="footer-restaurant">
             <article class="headline">
                 <figure class="headline__figure">
-                    <img src="./images/heros/hero-image_3.jpg" alt="Dicoding Fact Sheet">
+                    <picture>
+                        <source media="(max-width: 600px)" srcset="./images/hero-image_3-small.jpg">
+                        <img src="./images/hero-image_3.jpg" alt="Dicoding Fact Sheet">
+                    </picture>
                     <figcaption>View terbaik, By Mangkang Food</figcaption>
                 </figure>
                 <div class="headline__content">
