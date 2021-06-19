@@ -21,7 +21,10 @@ class GalleryItem extends HTMLElement {
                 <div class="sample-content">
                     <p class="content-date">${this._restaurants.name} <a href="#" class="content-author button-min"> from ${this._restaurants.city}</a>
                     </p>
-                    <h1 class="content-title"><a class="button-min" href="${`/#/detail/${this._restaurants.id}`}">${this._restaurants.name}</a></h1>
+                    <h1 class="content-title">
+                      <a class="button-min" id="btndetail" href="${`/#/detail/${this._restaurants.id}`}">${this._restaurants.name}
+                      </a>
+                    </h1>
                     <p class="content-description">${desc} ...</p>
                 </div>
                 <div class="sample-rating">

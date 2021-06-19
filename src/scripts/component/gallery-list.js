@@ -14,6 +14,7 @@ class GalleryList extends HTMLElement {
         const galleryItemElement = document.createElement('gallery-item')
         galleryItemElement.restaurants = restaurants
         this.appendChild(galleryItemElement)
+        galleryItemElement.classList.add('item-restaurant')
       }
     })
   }

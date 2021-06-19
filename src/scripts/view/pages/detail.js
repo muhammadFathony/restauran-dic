@@ -10,7 +10,7 @@ const Detail = {
         <div class="explore-detail">
             <h1 class="explore-label">Detail</h1>
                 <detail-restaurant></detail-restaurant>
-            <div id="favorite-button"></div>
+            <div id="favorite-button-container"></div>
             <div class="add-reviews">
               <div class="form">
                 <label>Name : </label>
@@ -18,7 +18,7 @@ const Detail = {
               </div>
               <div class="form">
                 <label>Review : </label>
-                <textarea type="text" id="textReview" name="textReviews" placeholder="Your Review" class="text-reviews"></textarea>
+                <textarea type="text" id="textReview" name="textReview" placeholder="Your Review" class="text-reviews"></textarea>
               </div>
               <div class="form">
                 <button id="btn-review"  aria-label="button-review" class="button-min button-review">Send Review</button>
@@ -44,13 +44,14 @@ const Detail = {
         name: textName.value,
         review: textReview.value
       }
-      RestaurantSource.sendReview(review)
+      const e = RestaurantSource.sendReview(review)
+      console.log(e)
       textName.value = ''
       textReview.value = ''
     })
 
     FavoriteButtonInitiator.init({
-      favoriteButtonContainer: document.querySelector('#favorite-button'),
+      favoriteButtonContainer: document.querySelector('#favorite-button-container'),
       restaurant: {
         id: idRestaurant,
         name: restaurant.restaurant.name,

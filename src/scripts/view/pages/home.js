@@ -8,7 +8,7 @@ const Home = {
         <div class="explore">
             <h1 class="explore-label">Explorer</h1>
             <div class="">
-                <gallery-list></gallery-list>
+                <gallery-list id="query"></gallery-list>
             </div>
         </div>
     </section>

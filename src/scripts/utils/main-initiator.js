@@ -1,5 +1,4 @@
 import '../component/gallery-list'
-import '../component/gallery-item'
 import '../component/detail-restaurant'
 import DataRestaurant from '../data/restaurant'
 

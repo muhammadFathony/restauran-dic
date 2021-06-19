@@ -8,7 +8,7 @@ class DataRestaurant {
       if (listRestaurant.restaurants.length > 0) {
         resolve(listRestaurant.restaurants)
       } else {
-        reject(`<h1 class="restaurant-not-found">Data is not founds</h1>`)
+        reject(`<h1 class="restaurant-not-found">Tidak ada restaurant untuk ditampilkan</h1>`)
       }
     })
   }

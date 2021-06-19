@@ -8,7 +8,7 @@ const Favorites = {
         <div class="explore">
             <h1 class="explore-label">Favorites</h1>
             <div class="">
-                <gallery-list></gallery-list>
+                <gallery-list  id="query"></gallery-list>
             </div>
         </div>
     </section>
