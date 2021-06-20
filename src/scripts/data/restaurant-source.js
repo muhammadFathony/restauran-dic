@@ -25,15 +25,14 @@ class RestaurantSource {
       redirect: 'follow'
     }
 
-    await fetch('https://restaurant-api.dicoding.dev/review', requestOptions)
-      .then(response => response.text())
-      .then(result => {
-        alert('sukses add review')
-        return result.json()
+    const a = await fetch('https://restaurant-api.dicoding.dev/review', requestOptions)
+      .then(response => {
+        return response.json()
       })
       .catch(error => {
         return error
       })
+    return a
   }
 }
 

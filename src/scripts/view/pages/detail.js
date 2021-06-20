@@ -23,6 +23,9 @@ const Detail = {
               <div class="form">
                 <button id="btn-review"  aria-label="button-review" class="button-min button-review">Send Review</button>
               </div>
+              <div class="message-review">
+                <h1 id="message-sent">pesan</h1>
+              </div>
             </div>
         </div>
     </section>
@@ -44,8 +47,25 @@ const Detail = {
         name: textName.value,
         review: textReview.value
       }
-      const e = RestaurantSource.sendReview(review)
-      console.log(e)
+      RestaurantSource.sendReview(review)
+        .then(res => {
+          const cusRev = document.querySelector('.customer-reviews')
+          const mesRev = document.querySelector('.message-review')
+          const messageSent = document.querySelector('#message-sent')
+          messageSent.innerHTML = '<h5>Review berhasil ditambahkan</h5>'
+          mesRev.style.display = 'block'
+          let newReview = ''
+          res.customerReviews.forEach((value, key) => {
+            newReview += `<article class="review" id="${key}">
+                              <h3 class="date-review">Review - ${value.date}</h3>
+                              <div class="review-desc">${value.review}</div>
+                              <div class="reviewers">
+                                <h5>By : ${value.name}</h5>
+                              </div>
+                          </article>`
+          })
+          cusRev.innerHTML = newReview
+        })
       textName.value = ''
       textReview.value = ''
     })

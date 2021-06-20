@@ -13,54 +13,54 @@ Scenario('showing empty liked restaurant', ({ I }) => {
   I.see(message, '.restaurant-not-found')
 })
 
-// Scenario('liking one restaurant', async ({ I }) => {
-//   I.see(message, '.sample-restaurant')
+Scenario('liking one restaurant', async ({ I }) => {
+  I.see(message, '.sample-restaurant')
  
-//   I.amOnPage('/')
+  I.amOnPage('/')
   
-//   I.seeElement('.item-restaurant .sample-item')
-//   const firstRestaurant = locate('#btndetail').first()
-//   const firstRestaurantTitle = await I.grabTextFrom(firstRestaurant)
-//   I.click(firstRestaurant)
+  I.seeElement('.item-restaurant .sample-item')
+  const firstRestaurant = locate('#btndetail').first()
+  const firstRestaurantTitle = await I.grabTextFrom(firstRestaurant)
+  I.click(firstRestaurant)
   
-//   I.seeElement('#likeButton')
-//   I.click('#likeButton')
+  I.seeElement('#likeButton')
+  I.click('#likeButton')
   
-//   I.amOnPage('/#/favorites')
-//   I.seeElement('.item-restaurant .sample-item')
-//   const likedRestaurant = await I.grabTextFrom('#btndetail')
+  I.amOnPage('/#/favorites')
+  I.seeElement('.item-restaurant .sample-item')
+  const likedRestaurant = await I.grabTextFrom('#btndetail')
   
-//   assert.strictEqual(firstRestaurantTitle, likedRestaurant)
-// })
+  assert.strictEqual(firstRestaurantTitle, likedRestaurant)
+})
 
-// Scenario('unliking one restaurant', async ({ I }) => {
-//   I.see(message, '.sample-restaurant')
+Scenario('unliking one restaurant', async ({ I }) => {
+  I.see(message, '.sample-restaurant')
  
-//   I.amOnPage('/')
+  I.amOnPage('/')
   
-//   I.seeElement('.item-restaurant .sample-item')
-//   const firstRestaurant = locate('#btndetail').first()
-//   const firstRestaurantTitle = await I.grabTextFrom(firstRestaurant)
-//   I.click(firstRestaurant)
+  I.seeElement('.item-restaurant .sample-item')
+  const firstRestaurant = locate('#btndetail').first()
+  const firstRestaurantTitle = await I.grabTextFrom(firstRestaurant)
+  I.click(firstRestaurant)
   
-//   I.seeElement('#likeButton')
-//   I.click('#likeButton')
+  I.seeElement('#likeButton')
+  I.click('#likeButton')
   
-//   I.amOnPage('/#/favorites')
-//   I.seeElement('.item-restaurant .sample-item')
-//   const likedRestaurant = await I.grabTextFrom('#btndetail')
+  I.amOnPage('/#/favorites')
+  I.seeElement('.item-restaurant .sample-item')
+  const likedRestaurant = await I.grabTextFrom('#btndetail')
   
-//   assert.strictEqual(firstRestaurantTitle, likedRestaurant)
+  assert.strictEqual(firstRestaurantTitle, likedRestaurant)
   
-//   I.click(likedRestaurant)
-//   I.seeElement('#likeButton')
-//   I.click('#likeButton')
+  I.click(likedRestaurant)
+  I.seeElement('#likeButton')
+  I.click('#likeButton')
   
-//   I.amOnPage('/#/favorites')
-//   I.seeElement('#query')
-//   const EmptyFavRestaurant = await I.grabTextFrom('#query')
-//   assert.strictEqual(EmptyFavRestaurant, message)
-// })
+  I.amOnPage('/#/favorites')
+  I.seeElement('#query')
+  const EmptyFavRestaurant = await I.grabTextFrom('#query')
+  assert.strictEqual(EmptyFavRestaurant, message)
+})
 
 Scenario('Customer review', async ({ I }) => {
   I.see(message, '#query')
@@ -71,14 +71,14 @@ Scenario('Customer review', async ({ I }) => {
   I.click(locate('#btndetail').first())
 
   I.seeElement('.add-reviews')
-  pause()
+  
   const textReview = 'Review from E2E restaurant'
   I.fillField('textName', 'Muhammad Fathony')
   I.fillField('textReview', textReview)
-  pause()
+
   I.click('#btn-review')
-  pause()
-  const lastReview = locate('.customer-reviews').last()
+  
+  const lastReview = locate('.review-desc').last()
   const textLastReview = await I.grabTextFrom(lastReview)
   pause()
   assert.strictEqual(textReview, textLastReview)
